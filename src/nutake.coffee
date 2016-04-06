@@ -4,7 +4,7 @@ download_url = abuse_url.replace("/packages/","/api/v2/package/").replace("/Repo
 # eg. https://nuget.org/api/v2/package/Microsoft.Bcl.Async/1.0.14-rc
 
 [name, version] = abuse_url.split("/").slice(-3,-1)
-download_name = "#{name}-#{version}.zip"
+download_name = "#{name}-#{version}.nupkg"
 
 badge = $(".nuget-badge")
 hyperlink = $("<a>", {href: download_url, download: download_name}).append("<b>Download</b> #{download_name}")
